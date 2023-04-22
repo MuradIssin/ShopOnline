@@ -1,0 +1,237 @@
+.banner__block {
+  background-image: url("../../image/banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 480px;
+  border-radius: 20px;
+  position: relative;
+  color: #FFFFFF;
+  margin-bottom: 60px;
+}
+
+.banner__block::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(ales-nesetril-Im7lZjxeLhg-unsplash.jpg);
+}
+
+.banner__title {
+  position: relative;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 130%;
+  color: #FFFFFF;
+  padding-top: 145px;
+  padding-left: 112px;
+  text-align: start;
+  margin-bottom: 100px;
+  text-transform: none;
+  /* margin-bottom: 0; */
+}
+
+.banner__timer {
+  position: relative;
+  /* display: grid; */
+  /* grid-template-columns: 1fr max-content 1fr; */
+  /* grid-template-rows: 21px 78px; */
+
+  /* justify-items: center; */
+  /* gap: 5px 30px; */
+}
+
+.banner__timer-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.banner__wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.banner__day,
+.banner__hour,
+.banner__minute {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 130%;
+}
+
+.banner__timer-text {
+  font-size: 32px;
+  line-height: 130%;
+}
+
+
+/* .banner__timer-title--1 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: center;
+  position: relative;
+} */
+
+/* .banner__timer-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+  grid-column: 1/4;
+  grid-row: 1/2;
+} */
+
+/* .banner__day,
+.banner__hour,
+.banner__minute {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 130%;
+} */
+
+/* .banner__day {
+  justify-self: end;
+} */
+
+/* .banner__minute {
+  justify-self: start;
+} */
+
+/* .banner__timer-text {
+  font-size: 32px;
+  line-height: 130%;
+} */
+
+
+/* 222222222222222222222222222222222222222222222222222222222222222222222222222222222 */
+
+@media (max-width:1200px) {
+  .banner__block {
+    height: 314px;
+    margin-bottom: 22px;
+    border-radius: 16px;
+    background-image: url("../../image/banner_1024.jpg");
+  }
+
+  .banner__block::before {
+    border-radius: 16px;
+  }
+
+  .banner__title {
+    font-size: 40px;
+    padding-top: 80px;
+    padding-left: 80px;
+    margin-bottom: 63px;
+  }
+
+
+  .banner__timer-title {
+    margin-bottom: 10px;
+  }
+
+  .banner__wrapper {
+    gap: 20px;
+  }
+
+  .banner__day,
+  .banner__hour,
+  .banner__minute {
+    font-size: 40px;
+  }
+
+  .banner__timer-text {
+    font-size: 20px;
+  }
+
+}
+
+/* 333333333333333333333333333333 */
+
+@media (max-width:768px) {
+  .banner__block {
+    height: 280px;
+    margin-bottom: 40px;
+    border-radius: 16px;
+    background-image: url("../../image/banner_768.jpg");
+  }
+
+  .banner__block::before {
+    border-radius: 16px;
+  }
+
+  .banner__title {
+    font-size: 30px;
+    padding-top: 64px;
+    padding-left: 80px;
+    margin-bottom: 82px;
+  }
+
+  .banner__timer-title {
+    font-size: 12px;
+  }
+
+  .banner__day,
+  .banner__hour,
+  .banner__minute {
+    font-size: 30px;
+  }
+
+  .banner__wrapper {
+    gap: 10px;
+  }
+
+  .banner__timer-text {
+    font-size: 16px;
+  }
+}
+
+/* 44444444444444444444444444444444444444444444444444444444444 */
+
+@media (max-width:523px) {
+  .banner__block {
+    height: 340px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-image: url("../../image/banner_280.jpg");
+  }
+
+  .banner__block::before {
+    border-radius: 8px;
+  }
+
+  .banner__title {
+    font-size: 22px;
+    padding-top: 50px;
+    padding-left: 29px;
+    margin-bottom: 189px;
+  }
+
+  .banner__timer-title {
+    font-size: 8px;
+  }
+
+  .banner__day,
+  .banner__hour,
+  .banner__minute {
+    font-size: 20px;
+  }
+
+  .banner__timer-text {
+    font-size: 12px;
+  }
+
+  .banner__wrapper {
+    gap: 8px;
+  }
+
+
+}
