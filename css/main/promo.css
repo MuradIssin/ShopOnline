@@ -3,9 +3,8 @@
   display: grid;
   grid-template-columns: repeat(6, minmax(130px, 245px));
   grid-template-rows: repeat(4, minmax(130px, 245px));
-  /* gap: 26px 60px; */
   row-gap: 26px;
-  /* column-gap: 60px; */
+  column-gap: 60px;
   justify-content: space-between;
   grid-template-areas:
     "book clock sneakers sneakers boxes boxes"
@@ -20,375 +19,283 @@
   background-position: center;
   background-size: cover;
   color: #ffffff;
-  padding: 20px;
   width: 100%;
+  position: relative;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 130%;
 }
 
-
-.promo__item--1 {
+.promo__item--book {
   grid-area: book;
-  /* книга */
   background-image: url("../../image/book.jpg");
   position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px 27px;
+  flex-wrap: wrap;
 }
 
-.promo__item--1::after {
-  position: relative;
+.promo__item--book::before {
+  position: absolute;
+  content: "";
   width: 100%;
   height: 100%;
-  /* content: ""; */
   top: 0;
   left: 0;
   background: linear-gradient(181.33deg, rgba(0, 0, 0, 0) 9.23%, rgba(0, 0, 0, 0.2) 98.87%);
   border-radius: 20px;
 }
 
-.promo__item--1 .promo__text {
-  /* padding-top: 90px; */
-  padding-top: 36%;
-  /* padding-left: 20px; */
-  /* padding-left: 8.1%; */
-  max-width: 190px;
+.promo__text {
+  position: relative;
+  /* justify-self: flex-start; */
+}
+
+.promo__text span {
   font-weight: 800;
   font-size: 40px;
-  line-height: 44px;
+  line-height: 130%;
 }
 
-.promo__item--1 .promo__text span {
-  /* книга span */
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 30px;
-}
-
-.promo__item--2 {
+.promo__item--clock {
   grid-area: clock;
-  /* часы */
   background-image: url("../../image/clock.jpg");
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 27px 14px;
 }
 
-.promo__item--2::after {
-  position: relative;
+.promo__item--clock .promo__discount {
+  align-self: flex-end;
+}
+
+.promo__item--clock::before {
+  position: absolute;
+  content: "";
   width: 100%;
   height: 100%;
-  /* content: ""; */
   top: 0;
   left: 0;
   background: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%);
-  border-radius: 16px;
+  border-radius: 20px;
 }
 
-.promo__item--2 .promo__text {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 130%;
-  /* padding-top: 77px; */
-  padding-top: 31%;
-  /* padding-left: 14px; */
-  /* padding-left: 5.7%; */
-}
-
-.promo__discount::before {
-  content: "";
-  position: absolute;
+.promo__discount {
   width: 88px;
   height: 88px;
   border-radius: 50%;
   background-color: var(--discont-color);
-}
-
-.promo__discount::after {
-  /* content: ""; */
-  position: absolute;
   font-weight: 700;
   font-size: 30px;
   line-height: 130%;
-}
-
-.promo__item--2 .promo__discount::before {
-  /* часы - круг */
-  right: 20px;
-  bottom: 27px;
-}
-
-.promo__item--2 .promo__discount::after {
-  /* часы - дисконт */
-  content: "-25%";
-  /* position: absolute; */
-  right: 28px;
-  bottom: 52px;
-  /* font-weight: 700; */
-  /* font-size: 30px; */
-  /* line-height: 130%; */
-}
-
-.promo__item--3 {
-  grid-area: boots;
-  /* ботинки */
-  background-image: url("../../image/boots.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
-.promo__item--3::after {
+.promo__item--boots {
+  grid-area: boots;
+  background-image: url("../../image/boots.jpg");
+  position: relative;
+  padding: 20px;
+}
+
+.promo__item--boots::before {
   position: relative;
   width: 100%;
   height: 100%;
-  /* content: ""; */
+  content: "";
   top: 0;
   left: 0;
   background: linear-gradient(180.99deg, rgba(0, 0, 0, 0) 8.18%, rgba(0, 0, 0, 0.2) 99.15%);
   border-radius: 20px;
 }
 
-.promo__item--3 .promo__discount::before {
-  left: 20px;
-  top: 20px;
-}
-
-.promo__item--3 .promo__discount::after {
-  /* ботинки */
-  content: "-40%";
-  left: 29px;
-  top: 44px;
-}
-
-.promo__item--4 {
+.promo__item--sneakers {
   grid-area: sneakers;
-  /* кросовки */
   background-image: url("../../image/sneakers.jpg");
   position: relative;
+  padding: 20px;
+  display: flex;
+  align-items: end;
 }
 
-.promo__item--4::after {
-  position: relative;
+.promo__item--sneakers::before {
+  position: absolute;
   width: 100%;
   height: 100%;
-  /* content: ""; */
+  content: "";
   top: 0;
   left: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%);
   border-radius: 20px;
 }
 
-.promo__item--4 .promo__present {
-  /* content: ""; */
-  /* width: 476px; */
-  width: 92.25%;
-  height: 33%;
+.promo__item--sneakers .promo__present {
   position: relative;
-  /* left: 20px; */
-  left: 3.4%;
-  /* top: 329px; */
-  top: 63%;
   background-color: #38C0EB;
-  border-radius: 20px;
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 120%;
-  padding-top: 24px;
-  padding-left: 21px;
+  border-radius: 40px;
+  padding: 21px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+  /* text-align: center; */
 }
 
-.promo__item--4 .promo__present span {
+.promo__item--sneakers .promo__present span {
   font-weight: 400;
   font-size: 56px;
   line-height: 120%;
 }
 
-.promo__item--5 {
+.promo__item--boxes {
   grid-area: boxes;
-  /* 2 box */
   background-image: url("../../image/boxes.jpg");
   position: relative;
+  padding: 30px 125px 30px 30px;
+  display: flex;
+  align-items: flex-end;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
 }
 
-.promo__item--5::after {
+.promo__item--boxes::before {
   position: relative;
   width: 100%;
   height: 100%;
-  /* content: ""; */
   top: 0;
   left: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 7.46%, rgba(0, 0, 0, 0.2) 100%);
   border-radius: 20px;
 }
 
-.promo__item--5 .promo__text {
+.promo__item--laptop {
+  grid-area: laptop;
+  background-image: url("../../image/laptop.jpg");
+  position: relative;
+  padding: 30px 20px 20px 30px;
+  display: flex;
+  align-items: flex-end;
   font-weight: 700;
   font-size: 40px;
   line-height: 130%;
-  /* padding-left: 30px; */
-  /* padding-left: 5.45%; */
-  /* padding-top: 94px; 94/228 */
-  padding-top: 19.12%;
-  /* padding-bottom: 13.15%; */
 }
 
-.promo__item--6 {
-  grid-area: laptop;
-  /* ноутбук */
-  background-image: url("../../image/laptop.jpg");
-  position: relative;
-}
-
-.promo__item--6::before {
-  position: relative;
+.promo__item--laptop::before {
+  position: absolute;
   width: 100%;
   height: 100%;
-  /* content: ""; */
+  content: "";
   top: 0;
   left: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 12.28%, rgba(0, 0, 0, 0.2) 100%);
   border-radius: 20px;
-}
-
-.promo__item--6 .promo__text {
   font-weight: 700;
   font-size: 40px;
   line-height: 130%;
-  /* padding-top: 136px; */
-  padding-top: 27.58%;
-  /* padding-left: 30px; */
-  /* padding-left: 5.45%; */
-  width: 78%;
 }
 
-
-.promo__item--6 .promo__discount::before {
-  right: 20px;
-  bottom: 20px;
+.promo__wrap--laptop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-.promo__item--6 .promo__discount::after {
-  content: "-15%";
-  position: absolute;
-  right: 28px;
-  bottom: 45px;
-}
-
-
-.promo__item--7 {
+.promo__item--ny2022 {
   grid-area: ny2022;
   /* 2022 */
   background-image: url("../../image/2022.jpg");
   position: relative;
+  padding: 50px;
+  display: flex;
+  align-items: end;
 }
 
-.promo__item--7::before {
-  position: relative;
+.promo__item--ny2022:before {
+  position: absolute;
   width: 100%;
   height: 100%;
-  /* content: ""; */
+  content: "";
   top: 0;
   left: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 25.39%, rgba(0, 0, 0, 0.16) 100%);
   border-radius: 20px;
 }
 
-.promo__item--7 .promo__message {
-  /* content: ""; */
-  position: absolute;
-  width: 643px;
-  height: 108px;
-  background-color: #ffffff;
-  border-radius: 20px;
-  /* left: 50px; */
-  left: 4.3%;
-  /* bottom: 50px; */
-  bottom: 9.6%;
+.promo__item--ny2022 .promo__message {
+  position: relative;
   font-weight: 700;
   font-size: 40px;
   line-height: 120%;
   color: #F91155;
   text-transform: uppercase;
-  padding-left: 40px;
-  padding-top: 30px;
+  padding: 30px 43px 30px 40px;
+  background-color: #ffffff;
+  border-radius: 20px;
 }
 
-.promo__item--8 {
-
+.promo__item--woman {
   grid-area: woman;
-  /* girl */
   background-image: url("../../image/woman.jpg");
   background-position: top;
   position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 20px;
 }
 
-.promo__item--8::after {
-  position: relative;
+.promo__item--woman::before {
+  position: absolute;
   width: 100%;
   height: 100%;
-  /* content: ""; */
+  content: "";
   top: 0;
   left: 0;
   background: gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%);
   border-radius: 20px;
 }
 
-.promo__item--8 .promo__discount::before {
-  right: 20px;
-  bottom: 20px;
-}
-
-.promo__item--8 .promo__discount::after {
-  content: "-55%";
-  position: absolute;
-  right: 28px;
-  bottom: 45px;
-}
-
-.promo__item--9 {
+.promo__item--chemistry {
   grid-area: chemistry;
-  /* химия */
   background-image: url("../../image/chemistry.jpg");
   position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 20px 20px 37px 20px;
 }
 
-.promo__item--9::after {
-  position: relative;
+.promo__item--chemistry::before {
+  position: absolute;
   width: 100%;
   height: 100%;
-  /* content: ""; */
+  content: "";
   top: 0;
   left: 0;
   background: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%);
   border-radius: 20px;
 }
 
-.promo__item--9 .promo__discount::before {
-  left: 20px;
-  top: 20px;
-}
-
-.promo__item--9 .promo__discount::after {
-  content: "-25%";
-  position: absolute;
-  left: 28px;
-  top: 44px;
-}
-
-.promo__item--9 .promo__text {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 130%;
-  /* padding-left: 30px; */
-  /* padding-left: 12.2%; */
-  /* padding-top: 130px; */
-  padding-top: 55%;
-}
-
 .promo__item--10 {
   grid-area: balls;
-  /* шарики */
   background-image: url("../../image/balls.jpg");
 }
 
 .promo__item10::after {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
-  /* content: ""; */
+  content: "";
   top: 0;
   left: 0;
   background: linear-gradient(179.81deg, rgba(7, 7, 7, 0) 30.77%, rgba(0, 0, 0, 0.2) 99.83%);
@@ -401,22 +308,13 @@
 
 @media (max-width:1700px) {
   .promo__block {
-    /* grid-template-columns: repeat(6, minmax(130px, 245px)); */
-    /* grid-template-rows: repeat(4, minmax(130px, 245px)); */
     column-gap: 20px;
   }
 }
 
-@media (max-width:1630px) {
-  .promo__item--4 .promo__present {
-    /* content: ""; */
-    padding-top: 10px;
-    padding-left: 21px;
-  }
-}
-
-@media (max-width:1300px) {
+@media (max-width:1250px) {
   .promo__block {
+    column-gap: 30px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-template-areas:
@@ -431,74 +329,85 @@
   }
 
   .promo__card {
-    padding: 10px;
-  }
-
-  .promo__item--1 .promo__text {
-    font-size: 30px;
-    line-height: 39px;
-  }
-
-  .promo__item--1 .promo__text span {
-    /* книга span */
-    font-weight: 400;
+    border-radius: 16px;
     font-size: 24px;
   }
 
-  .promo__item--2 .promo__discount::before {
-    right: 10px;
-    bottom: 10px;
+  .promo__text span {
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 130%;
   }
 
-  .promo__item--2 .promo__discount::after {
-    right: 18px;
-    bottom: 35px;
+  .promo__item--book {
+    padding: 9px 36px 32px 9px;
   }
 
-  .promo__item--2 .promo__text {
-    font-size: 24px;
-    padding-top: 21%;
+  .promo__item--clock {
+    padding: 54px 10px 10px 9px;
   }
 
-  .promo__item--4 .promo__present {
-    font-size: 30px;
-    /* padding-top: 24px; */
-    /* padding-left: 25px; */
+  .promo__item--boots {
+    padding: 17px 10px;
   }
 
-  .promo__item--4 .promo__present span {
-    font-size: 44px;
+  .promo__item--sneakers .promo__present {
+    padding: 24px 27px 32px 25px;
   }
 
-  .promo__item--5 .promo__text {
-    font-size: 30px;
+  .promo__item--sneakers .promo__present span {
+    font-size: 36px;
   }
 
-  .promo__item--6 .promo__text {
+  .promo__item--boxes {
+    padding: 27px 30px;
     font-size: 30px;
   }
 
-  .promo__item--7 .promo__message {
+  .promo__item--laptop {
+    padding: 10px 10px 10px 30px;
     font-size: 30px;
-    width: 513px;
-    height: 83px;
-    padding-left: 47px;
-    padding-top: 24px;
   }
 
-  .promo__item--9 .promo__text {
-    font-size: 20px;
+  .promo__item--ny2022 {
+    padding: 39px 30px;
+  }
+
+  .promo__item--ny2022 .promo__message {
+    font-size: 30px;
+    padding: 24px 46px 23px 47px;
+    border-radius: 16px;
+  }
+
+  .promo__item--woman {
+    padding: 10px 23px;
+  }
+
+  .promo__item--chemistry {
+    padding: 10px 0px 19px 6px;
+  }
+
+  .promo__item--chemistry::before,
+  .promo__item--woman::before,
+  .promo__item--10::before,
+  .promo__item--ny2022::before,
+  .promo__item--laptop::before,
+  .promo__item--boxes::before,
+  .promo__item--sneakers::before,
+  .promo__item--boots::before,
+  .promo__item--clock::before,
+  .promo__item--book::before {
+    border-radius: 16px;
   }
 
 }
 
 
-@media (max-width:870px) {
+@media (max-width:768px) {
   .promo__block {
-    grid-template-columns: 2fr 2fr 4fr 1fr;
-    /* grid-template-rows: repeat (28, 20px); */
-    grid-template-rows: 130px 126px 80px 26px 35px 83px 337px;
-
+    column-gap: 20px;
+    grid-template-columns: 3fr 3fr 4fr 2fr;
+    grid-template-rows: 130px 126px 70px 36px 49px 83px 337px;
     grid-template-areas:
       "book clock sneakers sneakers"
       "boots boots sneakers sneakers"
@@ -507,188 +416,89 @@
       "laptop laptop woman chemistry"
       "laptop laptop woman balls"
       "ny2022 ny2022 ny2022 ny2022";
-    row-gap: 22px;
+    row-gap: 8px;
     justify-content: space-between;
     margin-bottom: 80px;
   }
 
-  .promo__item--1 .promo__text {
-    line-height: 22px;
-    font-size: 20px;
-  }
-
-  .promo__item--1 .promo__text span {
-    font-size: 20px;
-    line-height: 22px;
-  }
-
-  .promo__item--2 .promo__text {
+  .promo__card {
+    border-radius: 12px;
     font-size: 16px;
   }
 
-  .promo__discount::before {
+  .promo__text span {
+    font-size: 26px;
+  }
+
+  .promo__item--book {
+    padding: 0px 3px 15px 10px;
+  }
+
+  .promo__item--clock {
+    padding: 15px 10px 10px 5px;
+  }
+
+  .promo__discount {
     width: 50px;
     height: 50px;
-  }
-
-  .promo__discount::after {
+    font-weight: 700;
     font-size: 16px;
   }
 
-  .promo__item--2 .promo__discount::before {
-    /* часы - круг */
-    right: 10px;
-    bottom: 10px;
+  .promo__item--boots {
+    padding: 10px 10px;
   }
 
-  .promo__item--2 .promo__discount::after {
-    right: 18px;
-    bottom: 25px;
+  .promo__item--sneakers {
+    padding: 10px;
   }
 
-  .promo__item--3 .promo__discount::before {
-    left: 10px;
-    top: 10px;
-  }
-
-  .promo__item--3 .promo__discount::after {
-    /* ботинки */
-    left: 16px;
-    top: 24px;
-  }
-
-
-
-  /* 
-  .promo__item--1 {
-    height: 130px;
-  }
-
-  .promo__item--2 {
-    height: 126px;
-  }
-
-  .promo__item--3 {
-    height: 126px;
-  }
-
-  .promo__item--4 {
-    height: 380px;
-  }
-
-  .promo__item--5 {
-    height: 126px;
-  }
-
-  .promo__item--6 {
-    height: 126px;
-  }
-
-  .promo__item--7 {
-    height: 337px;
-  }
-
-  .promo__item--8 {
-    height: 171px;
-  }
-
-  .promo__item--9 {
-    height: 83px;
-  }
-
-  .promo__item--10 {
-    height: 83px;
-  } */
-
-
-
-  .promo__item--4 .promo__present {
-    /* width: 92.25%; */
-    height: 61px;
-    top: 81%;
-    font-size: 16px;
-    padding-top: 12px;
-    padding-left: 26px;
-
-  }
-
-  .promo__item--4 .promo__present span {
-    /* font-weight: 400; */
-    font-size: 26px;
-    /* line-height: 120%; */
-  }
-
-  .promo__item--5 .promo__text {
-    font-size: 16px;
-    /* padding-bottom: 60%; */
-    max-width: 170px;
-  }
-
-  .promo__item--6 .promo__text {
-    font-size: 16px;
-  }
-
-  .promo__item--6 .promo__discount::before {
-    right: 10px;
-    bottom: 10px;
-  }
-
-  .promo__item--6 .promo__discount::after {
-    right: 16px;
-    bottom: 25px;
-  }
-
-  .promo__item--7 .promo__message {
-    width: 347px;
-    height: 68px;
+  .promo__item--sneakers .promo__present {
+    padding: 12px 30px 20px 36px;
     border-radius: 12px;
-    left: 26px;
-    bottom: 26px;
-    font-size: 20px;
-    padding-left: 34px;
-    padding-top: 22px;
+    line-height: 110%;
+    font-size: 16px;
   }
 
-  .promo__item--8 {
-    background-position: top;
+  .promo__item--sneakers .promo__present span {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 110%;
   }
 
-  .promo__item--8 .promo__discount::before {
-    right: 10px;
-    bottom: 10px;
+  .promo__item--chemistry {
+    padding: 3px 7px 11px 3px;
   }
 
-  .promo__item--8 .promo__discount::after {
-    right: 15px;
-    bottom: 26px;
-  }
-
-  .promo__item--9 .promo__discount::before {
-    left: 3px;
-    top: 3px;
+  .promo__item--chemistry .promo__discount {
     width: 36px;
     height: 36px;
-  }
-
-  .promo__item--9 .promo__discount::after {
-    left: 7px;
-    top: 12px;
     font-size: 12px;
   }
 
-  .promo__item--9 .promo__text {
-
+  .promo__item--chemistry .promo__text {
     font-size: 12px;
-    padding-left: 3px;
+    line-height: 14.4px;
   }
 
+  .promo__item--chemistry::before,
+  .promo__item--woman::before,
+  .promo__item--10::before,
+  .promo__item--ny2022::before,
+  .promo__item--laptop::before,
+  .promo__item--boxes::before,
+  .promo__item--sneakers::before,
+  .promo__item--boots::before,
+  .promo__item--clock::before,
+  .promo__item--book::before {
+    border-radius: 12px;
+  }
 }
 
-@media (max-width:560px) {
+@media (max-width:450px) {
   .promo__block {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 130px 118px 280px 118px 118px 130px 130px 123px;
-
     grid-template-areas:
       "book clock"
       "boots boots"
@@ -702,51 +512,93 @@
     margin-bottom: 70px;
   }
 
-  .promo__item--1 .promo__text {
+  .promo__card {
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 130%;
+  }
+
+  .promo__item--book {
+    padding: 10px 40% 10px 10px;
+    flex-wrap: wrap;
+  }
+
+  .promo__text span {
+    font-size: 14px;
+  }
+
+  .promo__item--clock {
+    padding: 28px 5px 5px 10px;
+  }
+
+  .promo__item--boots {
+    padding: 5px;
+  }
+
+  .promo__item--sneakers {
+    padding: 10px;
+  }
+
+  .promo__item--sneakers .promo__present {
+    border-radius: 8px;
+    padding: 7px 25px 11px 25px;
     font-size: 12px;
     line-height: 110%;
-    max-width: 90px;
-    padding-top: 76px;
-
+    text-align: center;
   }
 
-  .promo__item--1 .promo__text span {
-    font-size: 12px;
-    line-height: 110%;
-  }
-
-  .promo__item--2 .promo__text {
-    font-weight: 700;
-    font-size: 12px;
-  }
-
-  .promo__item--4 .promo__present {
-    top: 203px;
+  .promo__item--sneakers .promo__present span {
     font-size: 16px;
     line-height: 110%;
-    padding-top: 16px;
-    padding-left: 38px;
   }
 
-  .promo__item--5 .promo__text {
+  .promo__item--boxes {
+    padding: 10px 16px;
     font-size: 12px;
-    max-width: 100%;
-
-    padding-left: 10px;
-    padding-top: 48px;
+    line-height: 130%;
   }
 
-  .promo__item--7 .promo__message {
-    width: 250px;
-    height: 30px;
+  .promo__item--laptop {
+    padding: 5px;
+    font-size: 12px;
+    line-height: 14.4px;
+  }
+
+  .promo__item--chemistry {
+    padding: 5px 3px 10px 9px;
+  }
+
+  .promo__item--chemistry .promo__discount {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .promo__item--chemistry .promo__text {
+    font-size: 12px;
+  }
+
+  .promo__item--ny2022 {
+    padding: 10px 15px;
+  }
+
+  .promo__item--ny2022 .promo__message {
+    font-size: 12px;
+    padding: 7px 41px;
     border-radius: 6px;
-    left: 15px;
-    bottom: 10px%;
-    font-weight: 700;
-    font-size: 12px;
-    text-transform: uppercase;
-    padding-left: 41px;
-    padding-top: 7px;
   }
 
+  .promo__item--chemistry::before,
+  .promo__item--woman::before,
+  .promo__item--10::before,
+  .promo__item--ny2022::before,
+  .promo__item--laptop::before,
+  .promo__item--boxes::before,
+  .promo__item--sneakers::before,
+  .promo__item--boots::before,
+  .promo__item--clock::before,
+  .promo__item--book::before {
+    border-radius: 8px;
+  }
 }
